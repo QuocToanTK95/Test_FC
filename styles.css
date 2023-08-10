@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
 }
 
 .todo-container {
@@ -9,6 +8,36 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+#new-task {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#dueDate {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#add-task {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
 }
 
 ul {
@@ -37,4 +66,49 @@ li {
   color: white;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Button Styling */
+.confirm-button,
+.cancel-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #3498db;
+  color: white;
+  margin-left: 10px;
 }

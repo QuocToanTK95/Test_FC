@@ -8,11 +8,32 @@
   </head>
   <body>
     <div class="todo-container">
-      <h1>Todo App</h1>
-      <input type="text" id="new-task" placeholder="Enter a task" />
-      <button id="add-task">Add Task</button>
+      <h1 class="todo-title">Todo App</h1>
+      <div class="form">
+        <label>Add Task:</label>
+        <input type="text" id="new-task" placeholder="Enter a task" />
+        <label>Due Date:</label>
+        <input type="datetime-local" id="dueDate" />
+        <button id="add-task">Add Task</button>
+      </div>
       <h4>List Task</h4>
       <ul id="task-list"></ul>
+      <!-- Modal HTML Structure -->
+      <div id="deleteModal" class="modal">
+        <div class="modal-content">
+          <p>Are you sure you want to delete this task?</p>
+          <button id="confirmDelete" class="confirm-button">Confirm</button>
+          <button id="cancelDelete" class="cancel-button">Cancel</button>
+        </div>
+      </div>
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <p>Edit task:</p>
+          <input type="text" id="editTaskInput" />
+          <button id="confirmEdit" class="confirm-button">Confirm</button>
+          <button id="cancelEdit" class="cancel-button">Cancel</button>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
